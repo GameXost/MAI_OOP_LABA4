@@ -1,0 +1,21 @@
+# Библиотека для header-only шаблонов
+add_library(laba4_lib INTERFACE)
+
+# Указываем директорию с заголовками
+target_include_directories(laba4_lib INTERFACE
+		${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+# Требуем C++20 для поддержки concepts
+target_compile_features(laba4_lib INTERFACE cxx_std_20)
+
+# Исполняемый файл
+add_executable(laba4_exe main.cpp)
+target_link_libraries(laba4_exe PRIVATE laba4_lib)
+target_compile_features(laba4_exe PRIVATE cxx_std_20)
+
+# Тесты (ИСПРАВЛЕНО: было laba4tests, должно быть laba4_tests)
+add_executable(laba4_tests tests/tests4.cpp)
+target_link_libraries(laba4_tests PRIVATE laba4_lib gtest_main)
+target_compile_features(laba4_tests PRIVATE cxx_std_20)
+add_test(NAME laba4_tests COMMAND laba4_tests)
