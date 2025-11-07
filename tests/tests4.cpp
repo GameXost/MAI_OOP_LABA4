@@ -3,12 +3,12 @@
 #include <sstream>
 #include <cmath>
 
-#include "../Point.h"
-#include "../Figure.h"
-#include "../Array.h"
-#include "../Square.h"
-#include "../Rectangle.h"
-#include "../Trapezoid.h"
+#include "../point.h"
+#include "../figure.h"
+#include "../array.h"
+#include "../square.h"
+#include "../rectangle.h"
+#include "../trapez.h"
 
 // Point tests
 TEST(PointTest, DefaultConstructor) {
