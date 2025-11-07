@@ -25,7 +25,7 @@ public:
         dots[3] = std::make_unique<Point<T>>(p4);
 
         if (area() < 1e-9) {
-            throw std::invalid_argument("points are collinear");
+            throw std::invalid_argument("точки колинеарны");
         }
     }
 
@@ -84,7 +84,7 @@ public:
     }
 
     void Print(std::ostream& outS) const override {
-        outS << "dots: ";
+        outS << "точки четырехугольника ";
         for (int i = 0; i < 4; ++i) {
             outS << "(" << dots[i]->x << ", " << dots[i]->y << ") ";
         }
@@ -97,7 +97,7 @@ public:
         }
 
         if (!inpS) {
-            throw std::runtime_error("failed to read rectangle data");
+            throw std::runtime_error("не удалось создать");
         }
 
         for (int i = 0; i < 4; ++i) {
