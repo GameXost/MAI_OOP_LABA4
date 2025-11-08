@@ -1,7 +1,7 @@
 #ifndef TRAPEZOID_H
 #define TRAPEZOID_H
 
-#include "Figure.h"
+#include "figure.h"
 #include <memory>
 #include <cmath>
 #include <stdexcept>

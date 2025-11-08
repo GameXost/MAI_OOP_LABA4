@@ -1,7 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "Figure.h"
+#include "figure.h"
 #include <memory>
 #include <cmath>
 #include <stdexcept>
